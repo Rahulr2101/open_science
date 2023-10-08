@@ -18,7 +18,7 @@ const Managment = () => {
           title: 'Card 2',
           description: 'Description for Card 2',
         },
-        // Add more card data as needed
+        
       ];
 
 
