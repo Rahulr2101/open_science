@@ -15,6 +15,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Your password is required"],
   },
+  userType: {
+    type: String,
+    enum: ["projectCreator", "contributor"],
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: new Date(),
