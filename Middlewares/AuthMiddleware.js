@@ -1,5 +1,5 @@
 const User = require("../Models/UserModel");
-require("dotenv").config();
+require("../.gitignore/node_modules/dotenv/lib/main").config();
 const jwt = require("jsonwebtoken");
 
 module.exports.userVerification = (req, res) => {
