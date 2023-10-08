@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const authRoute = require("./routes/AuthRoute")
+const projectRoute = require('./routes/ProjectRoute')
 dotenv.config()
-const port = 3000
+const port = 8000
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
@@ -21,4 +22,5 @@ mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser:true })
         console.error("Error connecting to MongoDB:", error);
     });
 
-app.use("/", authRoute);
+app.use("/auth", authRoute);
+app.use("/project",projectRoute)
