@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const projectSchema = require('./ProjectModel')
 
 const userSchema = new mongoose.Schema({
     email: {
@@ -23,6 +24,7 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: new Date(),
     },
+    projects: [projectSchema],
 });
 
 module.exports = mongoose.model("User", userSchema);
