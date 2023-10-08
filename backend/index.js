@@ -16,7 +16,7 @@ mongoose
   .catch((err) => console.error(err));
 
 app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server is listening on port ${3000}`);
 });
 
 app.use(
