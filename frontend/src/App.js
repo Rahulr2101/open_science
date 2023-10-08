@@ -3,6 +3,7 @@ import { BrowserRouter, Route,Routes } from 'react-router-dom';import Navbar fro
 import Hero from './components/Hero'
 import SignIn from './components/sign_in'
 import SignUp from './components/sign_up'
+import Managment from './components/management';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route exact path='/' element={<Hero/>}/>
       <Route path='/signup' element ={<SignUp/>}/>
       <Route path ='/signin' element={<SignIn/>}/>
+      <Route path='/Management' element={<Managment/>}/>
      </Routes>
      </BrowserRouter>
     </div>
